@@ -1,3 +1,4 @@
 ACCOUNT NO: 15471003      cust_id: 1003      open date: 2023-12-25
 2023-12-25      DEPOSIT         10000
-2023-12-25   WITHDRAW 1000       
+2023-12-25   WITHDRAW 1000       2024-03-22      TFR FROM 
+15471000Sathiamoorthyips                   100
