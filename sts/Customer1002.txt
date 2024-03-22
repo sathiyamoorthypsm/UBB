@@ -1,0 +1,4 @@
+ACCOUNT NO: 15471002      cust_id: 1002      open date: 2023-10-25
+2023-10-25      DEPOSIT         10000
+2023-10-25   DEPOSIT 1000       2023-10-25   WITHDRAW 10000      2023-10-25      TFR TO 
+15471000Sathiamoorthy                   500

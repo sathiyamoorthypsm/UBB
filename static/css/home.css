@@ -1,0 +1,14 @@
+body {  
+    background-image: url("https://img.freepik.com/premium-photo/bank-building-dollars-light-background-credit-bank-deposit-bank-financing-currency-exchange-financial-services-atm_99433-8067.jpg?w=2000"); 
+     background-repeat:no-repeat; 
+     background-size:cover;  
+    }  
+.admin{
+    background-color: #9ad3e6;
+    padding: 10px;
+    width: 400px;
+    margin: 10%;
+    font-size: 12px;
+    text-align: left;  
+}
+    

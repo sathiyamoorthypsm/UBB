@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSFER</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/transfer.css') }}">
+<body>
+    <header>
+        <h1>UNIQ BANK OF BHARATH<br>
+            Fund Transfer</br>
+        </h1>
+        </header>
+        <h3>
+            <div class="btn-container">
+                <a href="{{ url_for('demo')}}"><button type="button" class="button1">Back</button></a>
+            </div>
+          </h3>
+    <form action="/transfer" method="POST">
+        <div class="container">
+            <div class="card">
+              <h2>Fund Transfer</h2>
+              <form>
+              
+                <label for="acNoInput">From Account</label>
+                <input type="number" name="fac" id="acNoInput" placeholder="Enter from Acc number">
+                <br>
+                <h4><p id="nameResult" style="color: red;"></p></h4>
+               
+                
+              <label for="acNoInput1">To Account</label>
+                <input type="number" name="tac" id="acNoInput1" placeholder="Enter to Acc number">
+                <br>
+                <h4><p id="nameResult1" style="color: red;"></p></h4>
+             
+        
+                <label for="ammounttansfer">Enter Amount</label>
+                <input type="number" id="amount" placeholder="Enter Amount" name="amt">
+                <button type="submit">Confirm Transfer</button>
+            </div>
+    </form>
+    <script>
+        const acNoInput = document.getElementById('acNoInput');
+        const nameResult = document.getElementById('nameResult');
+
+        acNoInput.addEventListener('blur', () => {
+            const id = acNoInput.value;
+            // Make a Fetch API request to the backend
+            fetch(`http://127.0.0.1:5000/api/getname?ac=${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.name) {
+                        nameResult.textContent = `${data.name}`;
+                    } else {
+                        nameResult.textContent = 'A/C invalid';
+                    }
+                })
+                .catch(error => console.error(error));
+        });
+    </script>
+    <script>
+        const acNoInput1 = document.getElementById('acNoInput1');
+        const nameResult1 = document.getElementById('nameResult1');
+
+        acNoInput1.addEventListener('blur', () => {
+            const id1 = acNoInput1.value;
+            // Make a Fetch API request to the backend
+            fetch(`http://127.0.0.1:5000/api/getname?ac=${id1}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.name) {
+                        nameResult1.textContent = `${data.name}`;
+                    } else {
+                        nameResult1.textContent = 'A/C invalid';
+                    }
+                })
+                .catch(error => console.error(error));
+        });
+    </script>
+</body>
+</html>

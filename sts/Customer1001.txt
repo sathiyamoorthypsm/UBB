@@ -1,0 +1,4 @@
+ACCOUNT NO: 15471001      cust_id: 1001      open date: 2023-10-25
+2023-10-25      DEPOSIT         10000
+2023-10-25      WITHDRAW                   1000
+2023-10-25   WITHDRAW 1000       

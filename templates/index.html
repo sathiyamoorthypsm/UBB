@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account creation</title>
+    <style>
+      
+      .details {
+    background-color: #9ad3e6;
+    padding: 10px;
+    width: 800px;
+    margin: 10%;
+    font-size: 12px;
+    text-align: left;  
+}
+
+    </style>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/createaccount.css') }}">
+</head>
+<body>
+  <header>
+    <h1>UNIQ BANK OF BHARATH<br>
+        Customer Account Creation Form</br>
+    </h1>
+  </header>
+  <br>
+    <div class="form_div">
+        <div class="containerss">
+            <div class="form-part">
+              <h2>Enter Customer Details</h2>
+             <form action="/create" method="POST">
+              <div class="form-inputs">
+                <div class="sqr-input">
+                  <div class="text-input margin-bottom-zero">
+                    <div class="sqr-input">
+                      <div class="text-input">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="fname" id="fname" >
+                      </div>
+                      <div class="text-input">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="lname" id="lnaem">
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="text-input">
+                    <label for="phone">Mobile</label>
+                    <input type="text" name="phone" id="phone">
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+          
+                <div class="text-input">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email">
+                </div>
+          
+          
+                <div class="text-input">
+                  <label for="address">Address Line</label>
+                  <input type="text" name="address" id="address">
+                </div>
+          
+                <div class="cub-input">
+                  <div class="text-input">
+                    <label for="street">Street</label>
+                    <input type="text" name="street" id="street">
+                  </div>
+                  <div class="text-input">
+                    <label for="postalcode">Postal Code</label>
+                    <input type="text" name="postalcode" id="postalcode">
+                  </div>
+                  <div class="text-input">
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city">
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+          
+          
+                <div class="radio-button">
+                  <label>Gender</label>
+                  <ul>
+                    <li>
+                      <input type="radio" name="gender" value="Male" /><span>Male</span>
+                    </li>
+                    <li>
+                      <input type="radio" name="gender" value="Female" /><span>Female</span>
+                    </li>
+                  </ul>
+                </div>
+          
+                <div class="text-input">
+                  <label for="country">Country</label>
+                  <select name="country" id="country">
+                      <option value="0" selected>--- Choose your country ---</option>
+                      <option value="US">US</option>
+                      <option value="UK">UK</option>
+                      <option value="IN">IN</option>
+                      <option value="CN">CN</option>
+                  </select>
+                </div>
+          
+                <div class="text-input">
+                    <label for="country">Date of Birth</label>
+                          <input type="date" name="dob" />
+                  </div>
+          
+          
+                <div class="text-input amout_sec">
+                    <div>
+                        <label for="deposit">Inital Amount Deposit</label>
+                    </div>
+                    <div>
+                        <input type="number" name="deposit" id="Amount">
+              
+                    </div>                 
+                 
+                </div>
+
+
+          
+          
+                <div class="check-boxes">
+                    <div>
+                        <div class="pay_btn">
+                            <button type="submit" class="button_pay">Create Account</button>
+                        </div>
+                    </div>
+                </div>
+          
+              </div>
+            </form>
+            </div>
+          </div>
+    </div>
+    
+</body>
+</html>

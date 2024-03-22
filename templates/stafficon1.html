@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stafficon1.css') }}">
+</head>
+<body>
+   
+    <header>
+        <h2>UNIQ BANK OF BHARATH<br>
+            Employee Homepage</br>
+            
+        </h2>
+      </header> 
+      <div class="flash">
+      {% with messages = get_flashed_messages() %}  
+      {% if messages %}  
+            {% for message in messages %}  
+                 <p><h4>{{ message }}</h4></p>  
+            {% endfor %}  
+      {% endif %}  
+   {% endwith %}  
+</div>
+      <h3>
+        <div class="btn-container">
+          <a href="{{url_for('welcome')}}"><button type="button" class="button1">logout</button></a>
+        </div>
+      </h3>
+      <br>
+      
+      
+      <div class="container">
+        <div class="center" >
+            <div class="row">
+            <div class="col">
+           <h1>Accounts Section</h1>
+          <a href="{{ url_for('create')}}"><button>Account Creation</button></a>
+          <a href="{{ url_for('update')}}"><button>Account Update</button></a>
+          <a href="{{ url_for('ac_details')}}"><button>Account Details</button></a>
+        </div>
+    </div>
+      </div>
+      <div class="container1">
+        <div class="center1">
+            <div class="col">
+          <h1>Funds Section</h1>
+          <a href="{{url_for('deposit')}}"><button>Deposit</button></a>
+          <a href="{{url_for('withdraw')}}"><button>Withdraw</button></a>
+          <a href="{{url_for('transfer')}}"><button>Transfer</button></a>
+        </div>
+    </div>
+      </div>
+      </div>
+</body>
+</html>

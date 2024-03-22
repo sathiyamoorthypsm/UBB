@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WITHDRAW</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/withdraw.css') }}">
+<body>
+    <header>
+        <h1>UNIQ BANK OF BHARATH<br>
+            Fund Withdraw</br>
+        </h1>
+        </header>
+        <h3>
+            <div class="btn-container">
+                <a href="{{ url_for('demo')}}"><button type="button" class="button1">Back</button></a>
+            </div>
+          </h3>
+    <form action="/withdraw" method="POST">
+        <div class="container">
+            <div class="card">
+              <h2>Fund Withdraw</h2>
+              <form>
+                <label for="fromaccount">From Account</label>
+                <input type="number" id="acNoInput" placeholder="Enter from Acc number" name="ac_no">
+                <br>
+                <h4><p id="nameResult" color="red"></p></h4>
+                <br>
+                <label for="ammountwithdraw">Enter Amount to Withdraw</label>
+                <input type="number" id="amount" placeholder="Enter Amount" name="amount" >
+                <button type="submit">Confirm Withdraw</button>
+            </div>
+    </form>
+    <script>
+        
+        const id = document.getElementById('acNoInput').value;
+        const nameResult = document.getElementById('nameResult');
+        acNoInput.addEventListener('blur', () => {
+        const id =acNoInput.value;
+        
+        
+        // Make a Fetch API request to the backend
+        fetch(`http://127.0.0.1:5000/api/getname?ac=${id}`)
+            .then(response => response.json())
+            .then(data => {
+                const nameResult = document.getElementById('nameResult');
+                if (data.name) {
+                    nameResult.textContent = `Name: ${data.name}`;
+                } else {
+                    nameResult.textContent = 'A/C invalid';
+                }
+            })
+            .catch(error => console.error(error));
+    });
+</script>
+</body>
+</html>

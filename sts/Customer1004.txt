@@ -1,0 +1,4 @@
+ACCOUNT NO: 15471004      cust_id: 1004      open date: 2024-01-08
+2024-01-08      DEPOSIT         10000
+2024-01-08   DEPOSIT 1000       2024-01-08   WITHDRAW 6000       2024-01-08      TFR TO 
+15471000Sathiamoorthy                   3000
