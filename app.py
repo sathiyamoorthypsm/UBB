@@ -26,7 +26,7 @@ mail = Mail(app)
 db = SQLAlchemy(app)
 migrate = Migrate(app,db)
 
-SESSION_TIMEOUT = timedelta(minutes=1)
+SESSION_TIMEOUT = timedelta(minutes=5)
 
 class User(db.Model):
     cust_id = db.Column(db.Integer, primary_key=True)
@@ -87,13 +87,15 @@ def welcome():
         for item in a:
             emp_id = item.emp_id
             password2 = item.password
-        u_name = int(request.form["username"])
+        u_name = request.form["username"]
         password1 = request.form["password"]
-        if u_name == emp_id and password2 == password1:
+        if u_name == str(emp_id) and password2 == password1:
             session['username'] = u_name
             return render_template("stafficon1.html")
         else:
-            return"sorry"
+            flash("incorrect password")
+            flash("enter correct password")
+            return render_template("welcome.html")
     return render_template("welcome.html")
 @app.route('/create',methods=["POST","GET"])
 def create():

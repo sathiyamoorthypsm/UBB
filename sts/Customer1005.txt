@@ -1,0 +1,4 @@
+ACCOUNT NO: 15471005      cust_id: 1005      open date: 2024-05-24
+2024-05-24      DEPOSIT         1000
+2024-05-24   WITHDRAW 500        2024-05-24      TFR FROM 
+15471000Sathiamoorthyips                   1000
