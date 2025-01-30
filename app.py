@@ -15,7 +15,7 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'ubbbankindia@gmail.com'
-app.config['MAIL_PASSWORD'] = 'wliirdcdkisptpxs'  # Replace with your actual application-specific password
+app.config['MAIL_PASSWORD'] = 'paoabicdofxqkubi'  # Replace with your actual application-specific password
 
 
 UPLOAD_FOLDER = 'sts'  # Define the folder where you want to save the files
