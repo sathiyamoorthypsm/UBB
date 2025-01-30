@@ -308,7 +308,7 @@ def sms():
 @app.route('/demo', methods=["GET","POST"])
 def demo():
     return render_template("stafficon1.html")
-if __name__ ==('__main__'):
+if __name__ == '__main__':
     with app.app_context():
-        db.create_all()
-    app.run(port=8080,debug='True')
+        db.create_all()  # Ensure this works without errors
+    app.run(host="0.0.0.0", port=8080, debug=True)  # Listen on all interfaces
